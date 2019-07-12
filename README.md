@@ -4,13 +4,7 @@
 
 | Product |Version | Tags  | Dockerfile |
 |---------|--------|-------|------------|
-| Jira Software | 7.13.0 | 7.13.0, latest, latest.de | [Dockerfile](https://github.com/blacklabelops/jira/blob/master/Dockerfile) |
-| Jira Service Desk | 3.16.0 | servicedesk, servicedesk.3.16.0, servicedesk.de, servicedesk.3.16.0.de | [Dockerfile](https://github.com/blacklabelops/jira/blob/master/Dockerfile) |
-| Jira Core | 7.13.0 | core, core.7.13.0, core.de, core.7.13.0.de | [Dockerfile](https://github.com/blacklabelops/jira/blob/master/Dockerfile) |
-
-> Older tags remain but are not supported/rebuild.
-
-> `.de` postfix means images are installed with preset language german locale.
+| Jira Software | 8.2.3 | | [Dockerfile](https://github.com/blacklabelops/jira/blob/master/Dockerfile) |
 
 # Make It Short
 
