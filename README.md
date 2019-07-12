@@ -660,12 +660,6 @@ USER jira
 CMD ["jira"]
 ~~~~
 
-# Credits
-
-This project is very grateful for code and examples from the repository:
-
-[atlassianlabs/atlassian-docker](https://bitbucket.org/atlassianlabs/atlassian-docker)
-
 # References
 
 * [Atlassian Jira](https://www.atlassian.com/software/jira)
