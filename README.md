@@ -1,7 +1,5 @@
 # Dockerized Atlassian Jira
 
-"The best software teams ship early and often - Not many tools, one tool. JIRA Software is built for every member of your software team to plan, track, and release great software." - [[Source](https://www.atlassian.com/software/jira)]
-
 ## Supported tags and respective Dockerfile links
 
 | Product |Version | Tags  | Dockerfile |
@@ -13,15 +11,6 @@
 > Older tags remain but are not supported/rebuild.
 
 > `.de` postfix means images are installed with preset language german locale.
-
-## Related Images
-
-You may also like:
-
-* [blacklabelops/jira](https://github.com/blacklabelops/jira): The #1 software development tool used by agile teams
-* [blacklabelops/confluence](https://github.com/blacklabelops/confluence): Create, organize, and discuss work with your team
-* [blacklabelops/bitbucket](https://github.com/blacklabelops/bitbucket): Code, Manage, Collaborate
-* [blacklabelops/crowd](https://github.com/blacklabelops/crowd): Identity management for web apps
 
 # Make It Short
 
