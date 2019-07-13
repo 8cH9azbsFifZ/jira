@@ -1,0 +1,14 @@
+#### jiravolume
+#####docker run -d --name jira4 --network jiranet -v jiravolume:/var/atlassian/jira -e "JIRA_PROXY_NAME=jira.ziegenhain.com" -e "JIRA_PROXY_PORT=443" -e "JIRA_PROXY_SCHEME=https" jira-gz
+####docker run --name postgres -d     --network jiranet     -e 'POSTGRES_DB=jiradb'     -e 'POSTGRES_USER=jiradb'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+
+docker ps
+docker commit -p 650560c4f7bb jira4
+docker commit -p 10420c1649a9 postgres
+#docker images
+#docker save -o jira.tar jira4
+#docker save -o postgres.tar postgres
+docker run --rm --volumes-from jira4 -v ~/backup/20190712/:/backup ubuntu bash -c "cd /var/atlassian/jira && tar cvf /backup/jiravolume.tar ."
+docker inspect 10420c1649a9 |grep "Name 85"
+docker run --rm --volumes-from 10420c1649a9 -v ~/backup/20190712/:/backup ubuntu bash -c "cd /var/lib/postgresql/data && tar cvf /backup/postgresvolume.tar ."
+
