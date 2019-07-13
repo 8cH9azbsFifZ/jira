@@ -1,0 +1,47 @@
+docker stop jira4
+docker run -d --name jira4 --network jiranet -v jiravolume:/var/atlassian/jira -e "JIRA_PROXY_NAME=jira.ziegenhain.com" -e "JIRA_PROXY_PORT=443" -e "JIRA_PROXY_SCHEME=https" jira-gz
+docker run --name postgres -d     --network jiranet     -e 'POSTGRES_USER=jira'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+
+docker network create jiranet
+
+
+docker exec -it jira4 bash
+docker exec -it jira4 bash
+docker exec -it jira4 bash --user root
+docker exec -it --user root jira4 bash 
+docker exec -it --user root jira4 /bin/sh
+docker cp backup20190331.zip jira4:/var/atlassian/jira/import
+docker start jira4
+docker start jira4
+docker inspect jira4
+docker run --name postgres -d     --network jiranet     -v postgresvolume:/var/lib/postgresql     -e 'POSTGRES_USER=jira'     -e 'POSTGRES_PASSWORD=jellyfish'     -e 'POSTGRES_DB=jiradb'     -e 'POSTGRES_ENCODING=UNICODE'     -e 'POSTGRES_COLLATE=C'     -e 'POSTGRES_COLLATE_TYPE=C'     blacklabelops/postgres
+docker rmi postgres
+docker rm postgres
+docker stop postgres
+docker rm postgres
+docker run --name postgres -d     --network jiranet     -e 'POSTGRES_USER=jira'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+docker run -it --rm     --network jiranet     postgres:9.4     sh -c 'exec createdb -E UNICODE -l C -T template0 jiradb -h postgres -p 5432 -U jira'
+docker run -d --name jira     --network jiranet     -v jiravolume:/var/atlassian/jira   -e "JIRA_DATABASE_URL=postgresql://jira@postgres/jiradb"   -e "JIRA_DB_PASSWORD=jellyfish"    -p 80:8080 blacklabelops/jira
+docker run -d --name jira2     --network jiranet     -v jiravolume:/var/atlassian/jira   -e "JIRA_DATABASE_URL=postgresql://jira@postgres/jiradb"   -e "JIRA_DB_PASSWORD=jellyfish"    -p 80:8080 blacklabelops/jira
+docker stop postgres
+docker stop jira_jira_1 jira_postgresql_1
+docker run --name postgres -d     --network jiranet     -e 'POSTGRES_DB=jiradb'     -e 'POSTGRES_USER=jiradb'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+docker run --name postgres -d     --network jiranet     -e 'POSTGRES_DB=jiradb'     -e 'POSTGRES_USER=jiradb'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+docker start postgres
+docker save postgres:9.4  
+docker save postgres:9.4  docker commit -p cc478dbf56ef backup_nginx_01
+docker commit -p 10420c1649a9 backup_postgres_01
+docker save -o backup_postgres_01.tar backup_postgres_01
+docker stop postgres
+docker run postgres
+grep postgres:9.4  ~/.bash_history 
+docker run --name postgres -d     --network jiranet     -e 'POSTGRES_DB=jiradb'     -e 'POSTGRES_USER=jiradb'     -e 'POSTGRES_PASSWORD=jellyfish'     postgres:9.4
+mkdir postgres
+mkdir postgres/vol
+rsync -avP /var/lib/docker/volumes/85805c378b06ef16fc497231d2657cf2b6f59a17c1eeddde739cc87a2fb2fdf7/_data/. postgres/vol/.
+rsync -avP /var/lib/docker/volumes/85805c378b06ef16fc497231d2657cf2b6f59a17c1eeddde739cc87a2fb2fdf7/_data/. postgres/vol/.
+rsync -avP /var/lib/docker/volumes/85805c378b06ef16fc497231d2657cf2b6f59a17c1eeddde739cc87a2fb2fdf7/_data/. postgres/vol/.
+rsync -avP /var/lib/docker/volumes/85805c378b06ef16fc497231d2657cf2b6f59a17c1eeddde739cc87a2fb2fdf7/_data/. postgres/vol/.
+mv backup_postgres_01.tar postgres/
+mv postgres backup
+docker start postgres
